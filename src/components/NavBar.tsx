@@ -54,7 +54,7 @@ const NavBar = () => {
             </a>
           </div>
           <div
-            className='text-primary hidden transition-opacity lg:block dark:text-white'
+            className='text-primary transition-opacity dark:text-white'
             onClick={handleMode}
           >
             {darkTheme ? (
