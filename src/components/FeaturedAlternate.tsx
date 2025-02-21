@@ -27,7 +27,7 @@ const CardGrid = () => {
             key={proj.id}
             className='featured-alt flex even:flex-col-reverse odd:flex-col-reverse gap-10 items-start relative md:gap-20 md:even:flex-row md:odd:flex-row-reverse'
           >
-            <span className='featured-no absolute text-[10rem] text-primary-300 -top-32 opacity-20 hidden xl:block'>
+            <span className='featured-no absolute text-[10rem] text-primary-300 -top-32 opacity-20 hidden 2xl:block'>
               0{proj.id}
             </span>
             <div className='w-full z-10 md:w-1/2'>
