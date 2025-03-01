@@ -44,6 +44,7 @@ const NavBar = () => {
           <div className='flex items-center gap-8'>
             <a
               href='https://geoochi.github.io/blog'
+              target='_blank'
               className='text-2xl transition-opacity dark:text-white'
             >
               Blog
