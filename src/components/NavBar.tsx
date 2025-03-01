@@ -31,37 +31,33 @@ const NavBar = () => {
       } fixed top-0 w-full z-[100] transition-all duration-300`}
     >
       <div className='container'>
-        <div className='flex justify-end items-center px-0 py-4 gap-4 sm:px-6 lg:py-8 lg:gap-10'>
-          <div className='mr-auto'>
-            <a href='#home'>
-              {darkTheme ? (
-                <img
-                  className='h-12 w-auto'
-                  src={images.LogoDark}
-                  alt='brand icon'
-                  height={12}
-                  width={245}
-                />
-              ) : (
-                <img
-                  className='h-12 w-auto'
-                  src={images.LogoLight}
-                  alt='brand icon'
-                  height={12}
-                  width={245}
-                />
-              )}
+        <div className='flex justify-between items-center px-0 py-4 gap-4 sm:px-6 lg:py-8 lg:gap-10'>
+          <a href='#home'>
+            <img
+              className='h-12 w-auto'
+              src={darkTheme ? images.LogoDark : images.LogoLight}
+              alt='brand icon'
+              height={12}
+              width={245}
+            />
+          </a>
+          <div className='flex items-center gap-8'>
+            <a
+              href='https://geoochi.github.io/blog'
+              className='text-2xl transition-opacity dark:text-white'
+            >
+              Blog
             </a>
-          </div>
-          <div
-            className='text-primary transition-opacity dark:text-white'
-            onClick={handleMode}
-          >
-            {darkTheme ? (
-              <SunIcon className='h-6 w-6 cursor-pointer opacity-100' />
-            ) : (
-              <MoonIcon className='h-6 w-6 cursor-pointer opacity-100' />
-            )}
+            <div
+              className='text-primary transition-opacity dark:text-white'
+              onClick={handleMode}
+            >
+              {darkTheme ? (
+                <SunIcon className='h-6 w-6 cursor-pointer opacity-100' />
+              ) : (
+                <MoonIcon className='h-6 w-6 cursor-pointer opacity-100' />
+              )}
+            </div>
           </div>
         </div>
       </div>
