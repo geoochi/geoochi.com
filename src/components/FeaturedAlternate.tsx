@@ -3,7 +3,7 @@ import images from '@/constants/image'
 import { GlobeAltIcon } from '@heroicons/react/24/outline'
 import RichText from '@/components/RichText'
 
-const projects = [
+const demos = [
   {
     id: 1,
     image: images.ImageTrackFly,
@@ -22,7 +22,7 @@ const CardGrid = () => {
   return (
     <>
       <div className='flex flex-col gap-20 mt-32 md:gap-40 lg:gap-60'>
-        {projects.map((proj) => (
+        {demos.map((proj) => (
           <div
             key={proj.id}
             className='featured-alt flex even:flex-col-reverse odd:flex-col-reverse gap-10 items-start relative md:gap-20 md:even:flex-row md:odd:flex-row-reverse'

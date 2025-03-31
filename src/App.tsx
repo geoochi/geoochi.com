@@ -19,7 +19,7 @@ function App() {
       {/* <SectionWrapper id='experience' heading='EXPERIENCE'>
             <TwoColumnCard />
           </SectionWrapper> */}
-      <SectionWrapper id='projects' heading='PROJECTS'>
+      <SectionWrapper id='demos' heading='DEMOS'>
         <FeaturedAlternate />
       </SectionWrapper>
       <SectionWrapper id='uses' heading='USES'>

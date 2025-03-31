@@ -20,12 +20,20 @@ const logos = [
     title: 'React',
   },
   {
-    image: images.nextLogo,
-    title: 'NextJS',
-  },
-  {
     image: images.tailwindLogo,
     title: 'Tailwind',
+  },
+  {
+    image: images.pythonLogo,
+    title: 'Python',
+  },
+  {
+    image: images.opencvLogo,
+    title: 'OpenCV',
+  },
+  {
+    image: images.ffmpegLogo,
+    title: 'FFmpeg',
   },
 ]
 
