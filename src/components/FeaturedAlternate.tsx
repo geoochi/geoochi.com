@@ -58,7 +58,7 @@ const CardGrid = () => {
                       target='_blank'
                     >
                       <span className='absolute inset-0 border border-current'></span>
-                      <span className='flex flex-row gap-3 items-center px-4 py-3 transition-transform bg-white border border-current group-hover:-translate-x-1 group-hover:-translate-y-1'>
+                      <span className='flex flex-row gap-3 items-center px-4 py-3 transition-transform bg-white dark:bg-primary border border-current group-hover:-translate-x-1 group-hover:-translate-y-1'>
                         <svg
                           viewBox='0 0 20 20'
                           xmlns='http://www.w3.org/2000/svg'

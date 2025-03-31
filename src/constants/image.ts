@@ -1,5 +1,5 @@
 import ImageGeooChi from '@/assets/geoochi.jpg'
-import ImageTrackFly from '@/assets/projects/trackfly.png'
+import ImageTrackFly from '@/assets/demos/trackfly.png'
 
 import LogoLight from '@/assets/logo/logo-light.png'
 import LogoDark from '@/assets/logo/logo-dark.png'
