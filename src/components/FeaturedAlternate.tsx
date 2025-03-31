@@ -22,7 +22,7 @@ type Demo = {
 const demos: Demo[] = [
   {
     image: assets.ImageTrackFly,
-    heading: 'Track flying Animation',
+    heading: 'Track Fly Animation',
     description: 'An track fly animation built by python & js',
     githubLink: 'https://github.com/geoochi/track_fly',
     websiteLink: 'https://geoochi.github.io/track_fly',
@@ -32,7 +32,7 @@ const demos: Demo[] = [
   },
   {
     video: assets.VideoCollisions,
-    heading: 'Collisions Video',
+    heading: 'Collisions Render',
     description: 'colliding blocks that compute pi (opencv version)',
     githubLink: 'https://github.com/geoochi/collisions',
     python: true,
