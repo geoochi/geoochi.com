@@ -88,16 +88,6 @@ const CardGrid = () => {
                   )}
                 </div>
               </div>
-              <div className='relative'>
-                <div className='absolute inset-0 flex items-center' aria-hidden='true'>
-                  <div className='w-full border-t border-gray-300' />
-                </div>
-                <div className='relative flex justify-center'>
-                  <span className='uppercase px-2 bg-white text-sm text-gray-500 dark:bg-primary'>
-                    TECHNOLOGIES USED
-                  </span>
-                </div>
-              </div>
               <div className='flex flex-wrap items-center gap-4 py-6'>
                 {demo.html && (
                   <div className='flex flex-col justify-center items-center gap-4 py-4 px-4 bg-gray-50 rounded-full filter shadow-md dark:bg-primary-400 dark:hover:bg-primary-300'>
