@@ -6,9 +6,9 @@ import FeaturedAlternate from '@/components/FeaturedAlternate'
 import Footer from '@/components/Footer'
 import UsesList from '@/components/UsesList'
 import SectionWrapper from '@/components/SectionWrapper'
-import '@/index.css'
+import './index.css'
 
-function App() {
+const Home: React.FC = () => {
   return (
     <>
       <NavBar />
@@ -30,4 +30,4 @@ function App() {
   )
 }
 
-export default App
+export default Home

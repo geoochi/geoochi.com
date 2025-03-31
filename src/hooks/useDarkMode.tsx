@@ -1,43 +1,31 @@
-import { useEffect, useState } from 'react'
+import { useState, useEffect } from 'react'
 
-const useLocalStorage = (key: string, initialValue: any) => {
-  const [storedValue, setStoredValue] = useState(() => {
-    try {
-      const item = window.localStorage.getItem(key)
-      return item ? JSON.parse(item) : initialValue
-    } catch (error) {
-      console.log(error)
-      return initialValue
-    }
-  })
-
-  const setValue = (value: any) => {
-    try {
-      const valueToStore =
-        value instanceof Function ? value(storedValue) : value
-
-      setStoredValue(valueToStore)
-
-      window.localStorage.setItem(key, JSON.stringify(valueToStore))
-    } catch (error) {
-      console.log(error)
-    }
-  }
-  return [storedValue, setValue]
-}
-
-const useDarkMode = () => {
-  const [enabledState, setEnabledState] = useLocalStorage('dark-theme', true)
-  const isEnabled = typeof enabledState === 'undefined' ? true : enabledState
+function useTheme() {
+  const [theme, setTheme] = useState('')
 
   useEffect(() => {
-    const className = 'dark'
-    const bodyClass = window.document.body.classList
+    const savedTheme = localStorage.getItem('theme')
+    if (savedTheme) {
+      setTheme(savedTheme)
+    } else {
+      setTheme(window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
+    }
+  }, [])
 
-    isEnabled ? bodyClass.add(className) : bodyClass.remove(className)
-  }, [isEnabled])
+  useEffect(() => {
+    if (!theme) return
+    localStorage.setItem('theme', theme)
+    if (theme === 'dark') {
+      document.documentElement.classList.add('dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+    }
+  }, [theme])
 
-  return [enabledState, setEnabledState]
+  return {
+    theme,
+    setTheme,
+  }
 }
 
-export default useDarkMode
+export default useTheme

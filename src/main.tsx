@@ -1,5 +1,19 @@
-import { createRoot } from 'react-dom/client'
-import App from '@/App'
-import '@/index.css'
+import { LocationProvider, Router, Route, hydrate, prerender as ssr } from 'preact-iso'
 
-createRoot(document.getElementById('root')!).render(<App />)
+import Home from '@/pages/index'
+
+export const App: React.FC = () => {
+  return (
+    <LocationProvider>
+      <Route path='/' component={Home} />
+    </LocationProvider>
+  )
+}
+
+if (typeof window !== 'undefined') {
+  hydrate(<App />, document.getElementById('root'))
+}
+
+export async function prerender(data) {
+  return await ssr(<App {...data} />)
+}

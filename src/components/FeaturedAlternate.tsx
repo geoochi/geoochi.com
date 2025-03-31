@@ -3,12 +3,28 @@ import images from '@/constants/image'
 import { GlobeAltIcon } from '@heroicons/react/24/outline'
 import RichText from '@/components/RichText'
 
-const demos = [
+type Demo = {
+  id: number
+  image: string
+  heading: string
+  description: string
+  githubLink: string
+  websiteLink?: string
+  html?: boolean
+  javascript?: boolean
+  css?: boolean
+  react?: boolean
+  next?: boolean
+  tailwind?: boolean
+}
+
+const demos: Demo[] = [
   {
     id: 1,
     image: images.ImageTrackFly,
     heading: 'Track flying Animation',
     description: '<p>An track fly animation built by python & js</p>',
+    githubLink: 'https://github.com/geoochi/track_fly',
     websiteLink: 'https://geoochi.github.io/track_fly',
     html: true,
     javascript: true,
@@ -22,45 +38,27 @@ const CardGrid = () => {
   return (
     <>
       <div className='flex flex-col gap-20 mt-32 md:gap-40 lg:gap-60'>
-        {demos.map((proj) => (
+        {demos.map(demo => (
           <div
-            key={proj.id}
+            key={demo.id}
             className='featured-alt flex even:flex-col-reverse odd:flex-col-reverse gap-10 items-start relative md:gap-20 md:even:flex-row md:odd:flex-row-reverse'
           >
             <span className='featured-no absolute text-[10rem] text-primary-300 -top-32 opacity-20 hidden 2xl:block'>
-              0{proj.id}
+              0{demo.id}
             </span>
             <div className='w-full z-10 md:w-1/2'>
-              <h3 className='text-primary text-4xl font-semibold mb-4 dark:text-white'>
-                {proj.heading}
-              </h3>
-              <RichText
-                className='text-primary-400 text-base dark:text-neutral-300'
-                content={proj.description}
-              />
+              <h3 className='text-primary text-4xl font-semibold mb-4 dark:text-white'>{demo.heading}</h3>
+              <RichText className='text-primary-400 text-base dark:text-neutral-300' content={demo.description} />
               <div className='flex flex-row relative'>
                 <div className='flex flex-row justify-center gap-4 py-10'>
-                  {proj.websiteLink && (
-                    <a
-                      className='relative inline-block text-sm font-medium text-white group focus:outline-none focus:ring'
-                      href={proj.websiteLink}
-                      target='_blank'
-                    >
-                      <span className='absolute inset-0 border border-secondary group-active:border-secondary'></span>
-                      <span className='flex items-center gap-3 px-4 py-3 transition-transform bg-secondary border border-secondary active:border-secondary active:bg-secondary group-hover:-translate-x-1 group-hover:-translate-y-1'>
-                        <GlobeAltIcon className='w-6 h-6' />
-                        Website
-                      </span>
-                    </a>
-                  )}
-                  {proj.githubLink && (
+                  {demo.githubLink && (
                     <a
                       className='relative inline-block text-sm font-medium text-secondary dark:text-secondary-50 active:text-secondary group focus:outline-none focus:ring'
-                      href={proj.githubLink}
+                      href={demo.githubLink}
                       target='_blank'
                     >
                       <span className='absolute inset-0 border border-current'></span>
-                      <span className='flex flex-row gap-3 items-center px-4 py-3 transition-transform bg-transparent border border-current group-hover:-translate-x-1 group-hover:-translate-y-1'>
+                      <span className='flex flex-row gap-3 items-center px-4 py-3 transition-transform bg-white border border-current group-hover:-translate-x-1 group-hover:-translate-y-1'>
                         <svg
                           viewBox='0 0 20 20'
                           xmlns='http://www.w3.org/2000/svg'
@@ -75,13 +73,23 @@ const CardGrid = () => {
                       </span>
                     </a>
                   )}
+                  {demo.websiteLink && (
+                    <a
+                      className='relative inline-block text-sm font-medium text-white group focus:outline-none focus:ring'
+                      href={demo.websiteLink}
+                      target='_blank'
+                    >
+                      <span className='absolute inset-0 border border-secondary group-active:border-secondary'></span>
+                      <span className='flex items-center gap-3 px-4 py-3 transition-transform bg-secondary border border-secondary active:border-secondary active:bg-secondary group-hover:-translate-x-1 group-hover:-translate-y-1'>
+                        <GlobeAltIcon className='w-6 h-6' />
+                        Website
+                      </span>
+                    </a>
+                  )}
                 </div>
               </div>
               <div className='relative'>
-                <div
-                  className='absolute inset-0 flex items-center'
-                  aria-hidden='true'
-                >
+                <div className='absolute inset-0 flex items-center' aria-hidden='true'>
                   <div className='w-full border-t border-gray-300' />
                 </div>
                 <div className='relative flex justify-center'>
@@ -91,8 +99,8 @@ const CardGrid = () => {
                 </div>
               </div>
               <div className='flex flex-wrap items-center gap-4 py-6'>
-                {proj.html && (
-                  <div className='flex flex-col justify-center items-center gap-4 py-4 px-4 bg-gray-50 rounded-full filter shadow-md cursor-pointer hover:bg-neutral-300 dark:bg-primary-400 dark:hover:bg-primary-300'>
+                {demo.html && (
+                  <div className='flex flex-col justify-center items-center gap-4 py-4 px-4 bg-gray-50 rounded-full filter shadow-md dark:bg-primary-400 dark:hover:bg-primary-300'>
                     <img
                       className='h-8 object-contain dark:filter dark:invert'
                       src={images.htmlLogo}
@@ -102,8 +110,8 @@ const CardGrid = () => {
                     />
                   </div>
                 )}
-                {proj.css && (
-                  <div className='flex flex-col justify-center items-center gap-4 py-4 px-4 bg-gray-50 rounded-full filter shadow-md cursor-pointer hover:bg-neutral-300 dark:bg-primary-400 dark:hover:bg-primary-300'>
+                {demo.css && (
+                  <div className='flex flex-col justify-center items-center gap-4 py-4 px-4 bg-gray-50 rounded-full filter shadow-md dark:bg-primary-400 dark:hover:bg-primary-300'>
                     <img
                       className='h-8 object-contain dark:filter dark:invert'
                       src={images.cssLogo}
@@ -113,8 +121,8 @@ const CardGrid = () => {
                     />
                   </div>
                 )}
-                {proj.javascript && (
-                  <div className='flex flex-col justify-center items-center gap-4 py-4 px-4 bg-gray-50 rounded-full filter shadow-md cursor-pointer hover:bg-neutral-300 dark:bg-primary-400 dark:hover:bg-primary-300'>
+                {demo.javascript && (
+                  <div className='flex flex-col justify-center items-center gap-4 py-4 px-4 bg-gray-50 rounded-full filter shadow-md dark:bg-primary-400 dark:hover:bg-primary-300'>
                     <img
                       className='h-8 object-contain dark:filter dark:invert'
                       src={images.javascriptLogo}
@@ -124,8 +132,8 @@ const CardGrid = () => {
                     />
                   </div>
                 )}
-                {proj.react && (
-                  <div className='flex flex-col justify-center items-center gap-4 py-4 px-4 bg-gray-50 rounded-full filter shadow-md cursor-pointer hover:bg-neutral-300 dark:bg-primary-400 dark:hover:bg-primary-300'>
+                {demo.react && (
+                  <div className='flex flex-col justify-center items-center gap-4 py-4 px-4 bg-gray-50 rounded-full filter shadow-md dark:bg-primary-400 dark:hover:bg-primary-300'>
                     <img
                       className='h-8 object-contain dark:filter dark:invert'
                       src={images.reactLogo}
@@ -135,8 +143,8 @@ const CardGrid = () => {
                     />
                   </div>
                 )}
-                {proj.next && (
-                  <div className='flex flex-col justify-center items-center gap-4 py-4 px-4 bg-gray-50 rounded-full filter shadow-md cursor-pointer hover:bg-neutral-300 dark:bg-primary-400 dark:hover:bg-primary-300'>
+                {demo.next && (
+                  <div className='flex flex-col justify-center items-center gap-4 py-4 px-4 bg-gray-50 rounded-full filter shadow-md dark:bg-primary-400 dark:hover:bg-primary-300'>
                     <img
                       className='h-8 object-contain dark:filter dark:invert'
                       src={images.htmlLogo}
@@ -146,8 +154,8 @@ const CardGrid = () => {
                     />
                   </div>
                 )}
-                {proj.tailwind && (
-                  <div className='flex flex-col justify-center items-center gap-4 py-4 px-4 bg-gray-50 rounded-full filter shadow-md cursor-pointer hover:bg-neutral-300 dark:bg-primary-400 dark:hover:bg-primary-300'>
+                {demo.tailwind && (
+                  <div className='flex flex-col justify-center items-center gap-4 py-4 px-4 bg-gray-50 rounded-full filter shadow-md dark:bg-primary-400 dark:hover:bg-primary-300'>
                     <img
                       className='h-8 object-contain dark:filter dark:invert'
                       src={images.tailwindLogo}
@@ -168,8 +176,8 @@ const CardGrid = () => {
                 loading='lazy'
                 width={684}
                 height={355}
-                src={proj.image}
-                alt={proj.heading}
+                src={demo.image}
+                alt={demo.heading}
                 onLoad={() => setIsLoaded(true)}
               />
             </div>

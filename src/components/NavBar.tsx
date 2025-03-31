@@ -4,8 +4,7 @@ import images from '@/constants/image'
 import useDarkMode from '@/hooks/useDarkMode'
 
 const NavBar = () => {
-  const [darkTheme, setDarkTheme] = useDarkMode()
-  const handleMode = () => setDarkTheme(!darkTheme)
+  const { theme, setTheme } = useDarkMode()
 
   const [addBlur, setAddBlur] = useState(false)
 
@@ -35,7 +34,7 @@ const NavBar = () => {
           <a href='#home'>
             <img
               className='h-12 w-auto'
-              src={darkTheme ? images.LogoDark : images.LogoLight}
+              src={theme === 'dark' ? images.LogoDark : images.LogoLight}
               alt='brand icon'
               height={12}
               width={245}
@@ -51,9 +50,9 @@ const NavBar = () => {
             </a>
             <div
               className='text-primary transition-opacity dark:text-white'
-              onClick={handleMode}
+              onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
             >
-              {darkTheme ? (
+              {theme === 'dark' ? (
                 <SunIcon className='h-6 w-6 cursor-pointer opacity-100' />
               ) : (
                 <MoonIcon className='h-6 w-6 cursor-pointer opacity-100' />
