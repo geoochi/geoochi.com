@@ -1,38 +1,38 @@
 import { useState } from 'react'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs'
-import images from '@/constants/image'
+import images from '@/constants'
 
 const logos = [
   {
-    image: images.htmlLogo,
+    image: images.LogoHtml,
     title: 'HTML5',
   },
   {
-    image: images.cssLogo,
+    image: images.LogoCss,
     title: 'CSS3',
   },
   {
-    image: images.javascriptLogo,
+    image: images.LogoJavascript,
     title: 'JavaScript',
   },
   {
-    image: images.reactLogo,
+    image: images.LogoReact,
     title: 'React',
   },
   {
-    image: images.tailwindLogo,
+    image: images.LogoTailwind,
     title: 'Tailwind',
   },
   {
-    image: images.pythonLogo,
+    image: images.LogoPython,
     title: 'Python',
   },
   {
-    image: images.opencvLogo,
+    image: images.LogoOpencv,
     title: 'OpenCV',
   },
   {
-    image: images.ffmpegLogo,
+    image: images.LogoFfmpeg,
     title: 'FFmpeg',
   },
 ]

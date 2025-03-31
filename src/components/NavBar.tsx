@@ -1,5 +1,5 @@
 import { MoonIcon, SunIcon } from '@heroicons/react/24/solid'
-import images from '@/constants/image'
+import images from '@/constants'
 import useDarkMode from '@/hooks/useDarkMode'
 
 const NavBar = () => {

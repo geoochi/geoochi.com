@@ -1,13 +1,13 @@
-import images from '@/constants/image'
+import images from '@/constants'
 
 const socials = [
   {
-    logo: images.xLogo,
+    logo: images.LogoX,
     alt: 'X Icon',
     link: 'https://x.com/geoochi',
   },
   {
-    logo: images.githubLogo,
+    logo: images.LogoGithub,
     alt: 'Github Icon',
     link: 'https://github.com/geoochi',
   },
@@ -30,11 +30,7 @@ const HeroSection = () => {
                 className='bg-neutral w-max rounded-full hover:bg-neutral-300 dark:bg-primary-400 dark:hover:bg-primary-300'
               >
                 <a href={social.link} target='_blank'>
-                  <img
-                    className='h-14 w-14 p-4 transition-all dark:invert'
-                    src={social.logo}
-                    alt={social.alt}
-                  />
+                  <img className='h-14 w-14 p-4 transition-all dark:invert' src={social.logo} alt={social.alt} />
                 </a>
               </li>
             ))}
