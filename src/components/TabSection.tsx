@@ -28,7 +28,7 @@ const TabSection: React.FC = () => {
         </div>
         <TabPanel className='flex gap-20 items-center flex-col-reverse md:flex-row-reverse transition-all'>
           <div className='w-full text-primary md:w-1/2 dark:text-white'>
-            <h2 className='text-2xl font-semibold mb-2'>Full Stack Developer | Python & DeepLearning Developer</h2>
+            <h2 className='text-2xl font-semibold mb-2'>Full Stack | Python | OpenCV Developer</h2>
             <p className='text-base font-normal text-neutral-700 dark:text-neutral-300'>
               Full Stack freelance, love to code some webpage or python algorithm demos
             </p>
