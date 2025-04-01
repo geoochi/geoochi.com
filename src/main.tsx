@@ -1,4 +1,4 @@
-import { LocationProvider, Router, Route, hydrate, prerender as ssr } from 'preact-iso'
+import { LocationProvider, Route, hydrate, prerender as ssr } from 'preact-iso'
 
 import Home from '@/pages/index'
 
