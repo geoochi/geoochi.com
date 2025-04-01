@@ -1,45 +1,18 @@
-import { useState } from 'react'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs'
 import images from '@/constants'
 
 const logos = [
-  {
-    image: images.LogoHtml,
-    title: 'HTML5',
-  },
-  {
-    image: images.LogoCss,
-    title: 'CSS3',
-  },
-  {
-    image: images.LogoJavascript,
-    title: 'JavaScript',
-  },
-  {
-    image: images.LogoReact,
-    title: 'React',
-  },
-  {
-    image: images.LogoTailwind,
-    title: 'Tailwind',
-  },
-  {
-    image: images.LogoPython,
-    title: 'Python',
-  },
-  {
-    image: images.LogoOpencv,
-    title: 'OpenCV',
-  },
-  {
-    image: images.LogoFfmpeg,
-    title: 'FFmpeg',
-  },
+  { image: images.LogoHtml, title: 'HTML5' },
+  { image: images.LogoCss, title: 'CSS3' },
+  { image: images.LogoJavascript, title: 'JavaScript' },
+  { image: images.LogoReact, title: 'React' },
+  { image: images.LogoTailwind, title: 'Tailwind' },
+  { image: images.LogoPython, title: 'Python' },
+  { image: images.LogoOpencv, title: 'OpenCV' },
+  { image: images.LogoFfmpeg, title: 'FFmpeg' },
 ]
 
-const TabSection = () => {
-  const [isLoaded, setIsLoaded] = useState(false)
-
+const TabSection: React.FC = () => {
   return (
     <>
       <Tabs defaultIndex={0}>
@@ -55,28 +28,20 @@ const TabSection = () => {
         </div>
         <TabPanel className='flex gap-20 items-center flex-col-reverse md:flex-row-reverse transition-all'>
           <div className='w-full text-primary md:w-1/2 dark:text-white'>
-            <h2 className='text-2xl font-semibold mb-2'>
-              Full Stack Developer | Python & DeepLearning Developer
-            </h2>
+            <h2 className='text-2xl font-semibold mb-2'>Full Stack Developer | Python & DeepLearning Developer</h2>
             <p className='text-base font-normal text-neutral-700 dark:text-neutral-300'>
-              Full Stack freelance, love to code some webpage or python
-              algorithm demos
+              Full Stack freelance, love to code some webpage or python algorithm demos
             </p>
             <br />
           </div>
 
           <div className='w-full relative md:w-1/2 md:h-[450px]'>
-            {!isLoaded && (
-              <div className='absolute top-0 rounded-lg left-0 z-50 bg-primary-400 animate-pulse w-full md:h-[450px]' />
-            )}
             <img
               src={images.ImageGeooChi}
               className='h-full w-full z-10 object-cover object-top rounded-lg filter shadow-lg'
               alt='Image Felix'
-              loading='lazy'
               width={664}
               height={450}
-              onLoad={() => setIsLoaded(true)}
             />
           </div>
         </TabPanel>
@@ -96,9 +61,7 @@ const TabSection = () => {
                     width={56}
                     height={56}
                   />
-                  <h6 className='text-xl font-semibold text-primary dark:text-white'>
-                    {logo.title}
-                  </h6>
+                  <h6 className='text-xl font-semibold text-primary dark:text-white'>{logo.title}</h6>
                 </div>
               ))}
             </div>

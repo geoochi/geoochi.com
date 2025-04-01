@@ -13,7 +13,7 @@ const socials = [
   },
 ]
 
-const HeroSection = () => {
+const HeroSection: React.FC = () => {
   return (
     <section id='home' className='bg-white dark:bg-primary'>
       <div className='container relative'>

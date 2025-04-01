@@ -1,10 +1,9 @@
 import { MoonIcon, SunIcon } from '@heroicons/react/24/solid'
 import images from '@/constants'
-import useDarkMode from '@/hooks/useDarkMode'
+import useTheme from '@/hooks/use-theme'
 
-const NavBar = () => {
-  const { theme, setTheme } = useDarkMode()
-
+const NavBar: React.FC = () => {
+  const { theme, setTheme } = useTheme()
   return (
     <div className='fixed top-0 w-full z-[100] transition-all duration-300 bg-white dark:bg-primary'>
       <div className='container'>

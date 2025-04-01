@@ -41,7 +41,7 @@ const demos: Demo[] = [
   },
 ]
 
-const CardGrid = () => {
+const CardGrid: React.FC = () => {
   return (
     <>
       <div className='flex flex-col gap-20 lg:mt-32 md:gap-40 lg:gap-60'>
