@@ -30,9 +30,9 @@ const NavBar: React.FC = () => {
               onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
             >
               {theme === 'dark' ? (
-                <SunIcon className='h-6 w-6 cursor-pointer opacity-100' />
-              ) : (
                 <MoonIcon className='h-6 w-6 cursor-pointer opacity-100' />
+              ) : (
+                <SunIcon className='h-6 w-6 cursor-pointer opacity-100' />
               )}
             </div>
           </div>
