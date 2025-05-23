@@ -25,6 +25,13 @@ const NavBar: React.FC = () => {
             >
               Blog
             </a>
+            <a
+              href='https://geoochi.github.io/gallery'
+              target='_blank'
+              className='text-2xl transition-opacity dark:text-white'
+            >
+              Gallery
+            </a>
             <div
               className='text-primary transition-opacity dark:text-white'
               onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
