@@ -19,14 +19,14 @@ const NavBar: React.FC = () => {
           </a>
           <div className='flex items-center gap-8'>
             <a
-              href='https://geoochi.github.io/blog'
+              href='https://blog.geoochi.com'
               target='_blank'
               className='text-2xl transition-opacity dark:text-white'
             >
               Blog
             </a>
             <a
-              href='https://geoochi.github.io/gallery'
+              href='https://gallery.geoochi.com'
               target='_blank'
               className='text-2xl transition-opacity dark:text-white'
             >

@@ -25,7 +25,7 @@ const demos: Demo[] = [
     heading: 'Track Fly Animation',
     description: 'An track fly animation built by python & js',
     githubLink: 'https://github.com/geoochi/track_fly',
-    websiteLink: 'https://geoochi.github.io/track_fly',
+    websiteLink: 'https://track_fly.geoochi.com',
     html: true,
     javascript: true,
     css: true,
