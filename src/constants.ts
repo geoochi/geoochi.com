@@ -1,5 +1,5 @@
 import ImageGeooChi from '@/assets/geoochi.jpg'
-import ImageTrackFly from '@/assets/demos/trackfly.png'
+import ImageTrackFly from '@/assets/demos/trackfly.jpg'
 
 import VideoCollisions from '@/assets/demos/collisions.mp4'
 
