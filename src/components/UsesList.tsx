@@ -8,18 +8,9 @@ const usesData: { section: string; items: { name: string }[] }[] = [
       { name: 'Monitor - HKC 4K 27"' },
     ],
   },
-  {
-    section: 'Editor',
-    items: [{ name: 'Cursor' }, { name: 'Font - Cascadia' }],
-  },
-  {
-    section: 'Terminal',
-    items: [{ name: 'fwalch' }, { name: 'Oh My zsh' }, { name: 'Iterm2' }],
-  },
-  {
-    section: 'Other Software',
-    items: [{ name: 'X' }, { name: 'Discord' }, { name: 'Figma' }],
-  },
+  { section: 'Editor', items: [{ name: 'Cursor' }, { name: 'Font - Cascadia' }] },
+  { section: 'Terminal', items: [{ name: 'fwalch' }, { name: 'Oh My zsh' }, { name: 'Iterm2' }] },
+  { section: 'Other Software', items: [{ name: 'X' }, { name: 'Discord' }, { name: 'Figma' }] },
 ]
 
 const UsesList: React.FC = () => {

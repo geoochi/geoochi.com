@@ -9,33 +9,16 @@ const NavBar: React.FC = () => {
       <div className='container'>
         <div className='flex justify-between items-center px-0 py-4 gap-4 sm:px-6 lg:py-8 lg:gap-10'>
           <a href='#home'>
-            <img
-              className='h-12 w-auto'
-              src={theme === 'dark' ? images.LogoDark : images.LogoLight}
-              alt='brand icon'
-              height={12}
-              width={245}
-            />
+            <img className='h-12 w-auto' src={theme === 'dark' ? images.LogoDark : images.LogoLight} alt='brand icon' height={12} width={245} />
           </a>
           <div className='flex items-center gap-8'>
-            <a
-              href='https://blog.geoochi.com'
-              target='_blank'
-              className='text-2xl transition-opacity dark:text-white'
-            >
+            <a href='https://blog.geoochi.com' target='_blank' className='text-2xl transition-opacity dark:text-white'>
               Blog
             </a>
-            <a
-              href='https://gallery.geoochi.com'
-              target='_blank'
-              className='text-2xl transition-opacity dark:text-white'
-            >
+            <a href='https://gallery.geoochi.com' target='_blank' className='text-2xl transition-opacity dark:text-white'>
               Gallery
             </a>
-            <div
-              className='text-primary transition-opacity dark:text-white'
-              onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-            >
+            <div className='text-primary transition-opacity dark:text-white' onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
               {theme === 'dark' ? (
                 <MoonIcon className='h-6 w-6 cursor-pointer opacity-100' />
               ) : (

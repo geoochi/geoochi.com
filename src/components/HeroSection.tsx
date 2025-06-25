@@ -1,16 +1,8 @@
 import images from '@/constants'
 
 const socials = [
-  {
-    logo: images.LogoX,
-    alt: 'X Icon',
-    link: 'https://x.com/geoochi',
-  },
-  {
-    logo: images.LogoGithub,
-    alt: 'Github Icon',
-    link: 'https://github.com/geoochi',
-  },
+  { logo: images.LogoX, alt: 'X Icon', link: 'https://x.com/geoochi' },
+  { logo: images.LogoGithub, alt: 'Github Icon', link: 'https://github.com/geoochi' },
 ]
 
 const HeroSection: React.FC = () => {
@@ -25,10 +17,7 @@ const HeroSection: React.FC = () => {
         <div className='w-full relative bottom-20 md:w-auto md:absolute md:top-[70%]'>
           <ul className='flex flex-row justify-center items-center w-full gap-6 md:flex-col'>
             {socials.map((social, index) => (
-              <li
-                key={index}
-                className='bg-neutral w-max rounded-full hover:bg-neutral-300 dark:bg-primary-400 dark:hover:bg-primary-300'
-              >
+              <li key={index} className='bg-neutral w-max rounded-full hover:bg-neutral-300 dark:bg-primary-400 dark:hover:bg-primary-300'>
                 <a href={social.link} target='_blank'>
                   <img className='h-14 w-14 p-4 transition-all dark:invert' src={social.logo} alt={social.alt} />
                 </a>

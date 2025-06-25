@@ -7,7 +7,6 @@
     "allowJs": true,
     "checkJs": true,
     "baseUrl": ".",
-
     /* Preact Config */
     "jsx": "react-jsx",
     "jsxImportSource": "preact",

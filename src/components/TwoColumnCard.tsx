@@ -22,22 +22,17 @@ const TwoColumnCard: React.FC = () => {
             <div className='w-full border-t border-gray-300' />
           </div>
           <div className='relative flex justify-center'>
-            <span className='uppercase px-2 bg-gray-50 text-sm text-gray-500 dark:bg-primary-500'>
-              duties & responsibilities
-            </span>
+            <span className='uppercase px-2 bg-gray-50 text-sm text-gray-500 dark:bg-primary-500'>duties & responsibilities</span>
           </div>
         </div>
 
         <ul className='text-base text-primary-400 list-inside list-disc dark:text-neutral-200'>
           <li>Developed web applications using JavaScript, React, Tailwind, and NextJS.</li>
           <li>
-            Created and developed websites, landing pages, and email templates using HubSpot CMS that are easy for
-            clients to edit and optimized for different devices
+            Created and developed websites, landing pages, and email templates using HubSpot CMS that are easy for clients to edit and optimized for
+            different devices
           </li>
-          <li>
-            Assisted in the maintenance and troubleshooting of client's websites to ensure smooth performance and user
-            satisfaction.
-          </li>
+          <li>Assisted in the maintenance and troubleshooting of client's websites to ensure smooth performance and user satisfaction.</li>
         </ul>
       </div>
       <div className='bg-gray-50 px-6 py-16 rounded-3xl h-full relative filter shadow-md md:px-10 dark:bg-primary-500'>
@@ -59,23 +54,17 @@ const TwoColumnCard: React.FC = () => {
             <div className='w-full border-t border-gray-300' />
           </div>
           <div className='relative flex justify-center'>
-            <span className='uppercase px-2 bg-gray-50 text-sm text-gray-500 dark:bg-primary-500'>
-              duties & responsibilities
-            </span>
+            <span className='uppercase px-2 bg-gray-50 text-sm text-gray-500 dark:bg-primary-500'>duties & responsibilities</span>
           </div>
         </div>
         <ul className='text-base text-primary-400 list-inside list-disc dark:text-neutral-200'>
           <li>
-            Developed and implemented CMS websites utilizing the HubSpot platform, resulting in an efficient and
-            user-friendly experience for clients
+            Developed and implemented CMS websites utilizing the HubSpot platform, resulting in an efficient and user-friendly experience for clients
           </li>
+          <li>Successfully resolved various technical issues for clients, contributing to a positive and productive project experience</li>
           <li>
-            Successfully resolved various technical issues for clients, contributing to a positive and productive
-            project experience
-          </li>
-          <li>
-            Achieved the top-rated badge on Upwork within four months of starting as a freelancer, demonstrating
-            exceptional performance and customer satisfaction in delivering high-quality front-end development services.
+            Achieved the top-rated badge on Upwork within four months of starting as a freelancer, demonstrating exceptional performance and customer
+            satisfaction in delivering high-quality front-end development services.
           </li>
         </ul>
       </div>

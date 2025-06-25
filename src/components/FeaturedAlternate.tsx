@@ -53,34 +53,18 @@ const CardGrid: React.FC = () => {
             <span className='featured-no absolute text-[10rem] text-primary-300 -top-32 opacity-20 hidden 2xl:block'>
               {index < 9 ? `0${index + 1}` : index + 1}
             </span>
-            <div
-              className={`w-full z-10 md:w-1/2 flex flex-col items-center ${
-                index % 2 === 1 ? 'md:items-end' : 'md:items-start'
-              }`}
-            >
+            <div className={`w-full z-10 md:w-1/2 flex flex-col items-center ${index % 2 === 1 ? 'md:items-end' : 'md:items-start'}`}>
               <h3 className='text-primary text-4xl font-semibold mb-4 dark:text-white'>{demo.heading}</h3>
               <p className='text-primary-400 text-base dark:text-neutral-300'>{demo.description}</p>
               <div className='flex flex-wrap items-center gap-4 py-4'>
                 {demo.html && (
                   <div className='flex flex-col justify-center items-center gap-4 py-4 px-4 bg-gray-50 rounded-full filter shadow-md dark:bg-primary-400 dark:hover:bg-primary-300'>
-                    <img
-                      className='h-8 object-contain dark:filter dark:invert'
-                      src={assets.LogoHtml}
-                      alt='html logo'
-                      width={32}
-                      height={32}
-                    />
+                    <img className='h-8 object-contain dark:filter dark:invert' src={assets.LogoHtml} alt='html logo' width={32} height={32} />
                   </div>
                 )}
                 {demo.css && (
                   <div className='flex flex-col justify-center items-center gap-4 py-4 px-4 bg-gray-50 rounded-full filter shadow-md dark:bg-primary-400 dark:hover:bg-primary-300'>
-                    <img
-                      className='h-8 object-contain dark:filter dark:invert'
-                      src={assets.LogoCss}
-                      alt='css logo'
-                      width={32}
-                      height={32}
-                    />
+                    <img className='h-8 object-contain dark:filter dark:invert' src={assets.LogoCss} alt='css logo' width={32} height={32} />
                   </div>
                 )}
                 {demo.javascript && (
@@ -96,13 +80,7 @@ const CardGrid: React.FC = () => {
                 )}
                 {demo.react && (
                   <div className='flex flex-col justify-center items-center gap-4 py-4 px-4 bg-gray-50 rounded-full filter shadow-md dark:bg-primary-400 dark:hover:bg-primary-300'>
-                    <img
-                      className='h-8 object-contain dark:filter dark:invert'
-                      src={assets.LogoReact}
-                      alt='react logo'
-                      width={32}
-                      height={32}
-                    />
+                    <img className='h-8 object-contain dark:filter dark:invert' src={assets.LogoReact} alt='react logo' width={32} height={32} />
                   </div>
                 )}
                 {demo.tailwind && (
@@ -118,35 +96,17 @@ const CardGrid: React.FC = () => {
                 )}
                 {demo.python && (
                   <div className='flex flex-col justify-center items-center gap-4 py-4 px-4 bg-gray-50 rounded-full filter shadow-md dark:bg-primary-400 dark:hover:bg-primary-300'>
-                    <img
-                      className='h-8 object-contain dark:filter dark:invert'
-                      src={assets.LogoPython}
-                      alt='python logo'
-                      width={32}
-                      height={32}
-                    />
+                    <img className='h-8 object-contain dark:filter dark:invert' src={assets.LogoPython} alt='python logo' width={32} height={32} />
                   </div>
                 )}
                 {demo.opencv && (
                   <div className='flex flex-col justify-center items-center gap-4 py-4 px-4 bg-gray-50 rounded-full filter shadow-md dark:bg-primary-400 dark:hover:bg-primary-300'>
-                    <img
-                      className='h-8 object-contain dark:filter dark:invert'
-                      src={assets.LogoOpencv}
-                      alt='opencv logo'
-                      width={32}
-                      height={32}
-                    />
+                    <img className='h-8 object-contain dark:filter dark:invert' src={assets.LogoOpencv} alt='opencv logo' width={32} height={32} />
                   </div>
                 )}
                 {demo.ffmpeg && (
                   <div className='flex flex-col justify-center items-center gap-4 py-4 px-4 bg-gray-50 rounded-full filter shadow-md dark:bg-primary-400 dark:hover:bg-primary-300'>
-                    <img
-                      className='h-8 object-contain dark:filter dark:invert'
-                      src={assets.LogoFfmpeg}
-                      alt='ffmpeg logo'
-                      width={32}
-                      height={32}
-                    />
+                    <img className='h-8 object-contain dark:filter dark:invert' src={assets.LogoFfmpeg} alt='ffmpeg logo' width={32} height={32} />
                   </div>
                 )}
               </div>
@@ -190,19 +150,9 @@ const CardGrid: React.FC = () => {
             </div>
             <div className='w-full z-10 relative md:w-1/2'>
               {demo.video ? (
-                <video
-                  className='w-full rounded-lg filter shadow-lg object-contain h-auto'
-                  src={demo.video}
-                  autoPlay
-                  muted
-                  loop
-                />
+                <video className='w-full rounded-lg filter shadow-lg object-contain h-auto' src={demo.video} autoPlay muted loop />
               ) : (
-                <img
-                  className='w-full rounded-lg filter shadow-lg object-contain h-auto'
-                  src={demo.image}
-                  alt={demo.heading}
-                />
+                <img className='w-full rounded-lg filter shadow-lg object-contain h-auto' src={demo.image} alt={demo.heading} />
               )}
             </div>
           </div>
