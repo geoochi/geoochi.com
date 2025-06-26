@@ -7,9 +7,9 @@
     @apply scroll-smooth;
   }
 
-  body * {
+  /* body * {
     @apply transition-colors;
-  }
+  } */
 }
 
 @layer components {
@@ -58,10 +58,10 @@
 
 @layer components {
   .loading-wrapper {
-    @apply w-full h-full fixed top-0 left-0 bg-primary grid items-center transition-all delay-300;
+    @apply w-full h-full fixed top-0 left-0 bg-primary grid items-center;
   }
 
   .loading {
-    @apply animate-spin border-8 rounded-full border-solid border-neutral w-[140px] h-[140px] transition-all delay-300;
+    @apply animate-spin border-8 rounded-full border-solid border-neutral w-[140px] h-[140px];
   }
 }

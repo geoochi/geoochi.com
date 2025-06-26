@@ -5,7 +5,7 @@ import useTheme from '@/hooks/use-theme'
 const NavBar: React.FC = () => {
   const { theme, setTheme } = useTheme()
   return (
-    <div className='fixed top-0 w-full z-[100] transition-all duration-300 bg-white dark:bg-primary'>
+    <div className='fixed top-0 w-full z-[100] bg-white dark:bg-primary'>
       <div className='container'>
         <div className='flex justify-between items-center px-0 py-4 gap-4 sm:px-6 lg:py-8 lg:gap-10'>
           <a href='#home'>
@@ -18,7 +18,7 @@ const NavBar: React.FC = () => {
             <a href='https://gallery.geoochi.com' target='_blank' className='text-2xl transition-opacity dark:text-white'>
               Gallery
             </a>
-            <div className='text-primary transition-opacity dark:text-white' onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
+            <div className='text-primary dark:text-white' onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
               {theme === 'dark' ? (
                 <MoonIcon className='h-6 w-6 cursor-pointer opacity-100' />
               ) : (
