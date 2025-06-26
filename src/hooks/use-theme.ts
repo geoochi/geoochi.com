@@ -8,6 +8,13 @@ function useTheme() {
   }, [])
 
   useEffect(() => {
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
+    const handleChange = (e: MediaQueryListEvent) => {
+      setTheme(e.matches ? 'dark' : 'light')
+    }
+
+    mediaQuery.addEventListener('change', handleChange)
+
     if (!theme) return
     if (theme === 'dark') {
       document.documentElement.classList.add('dark')
