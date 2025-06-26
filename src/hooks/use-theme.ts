@@ -4,22 +4,30 @@ type Theme = 'light' | 'dark'
 
 function useTheme() {
   const [theme, setTheme] = useState<Theme>('light')
+  const [isLoaded, setIsLoaded] = useState(false)
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
       setTheme(window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
-    }
-  }, [])
+    } else setTheme('light')
+    setIsLoaded(true)
 
-  useEffect(() => {
     if (typeof window !== 'undefined') {
       const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
       const handleChange = (e: MediaQueryListEvent) => {
         setTheme(e.matches ? 'dark' : 'light')
       }
       mediaQuery.addEventListener('change', handleChange)
+
+      return () => {
+        mediaQuery.removeEventListener('change', handleChange)
+      }
     }
-    if (!theme) return
+  }, [])
+
+  useEffect(() => {
+    if (!isLoaded) return
+
     if (theme === 'dark') {
       document.documentElement.classList.add('dark')
       document.documentElement.style.colorScheme = 'dark'
@@ -27,12 +35,9 @@ function useTheme() {
       document.documentElement.classList.remove('dark')
       document.documentElement.style.colorScheme = 'light'
     }
-  }, [theme])
+  }, [theme, isLoaded])
 
-  return {
-    theme,
-    setTheme,
-  }
+  return { theme, setTheme }
 }
 
 export default useTheme

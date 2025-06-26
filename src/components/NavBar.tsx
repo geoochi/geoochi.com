@@ -4,6 +4,7 @@ import useTheme from '@/hooks/use-theme'
 
 const NavBar: React.FC = () => {
   const { theme, setTheme } = useTheme()
+
   return (
     <div className='fixed top-0 w-full z-[100] bg-white dark:bg-primary'>
       <div className='container'>
