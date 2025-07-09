@@ -1,5 +1,6 @@
 import ImageGeooChi from '@/assets/geoochi.jpg'
 import ImageTrackFly from '@/assets/demos/trackfly.jpg'
+import ImageDquery from '@/assets/demos/dquery.png'
 
 import VideoCollisions from '@/assets/demos/collisions.mp4'
 
@@ -15,10 +16,12 @@ import LogoTailwind from '@/assets/logo/tailwind.svg'
 import LogoPython from '@/assets/logo/python.svg'
 import LogoOpencv from '@/assets/logo/opencv.svg'
 import LogoFfmpeg from '@/assets/logo/ffmpeg.svg'
+import LogoGo from '@/assets/logo/go.svg'
 
 export default {
   ImageTrackFly,
   ImageGeooChi,
+  ImageDquery,
   VideoCollisions,
   LogoLight,
   LogoDark,
@@ -32,4 +35,5 @@ export default {
   LogoPython,
   LogoOpencv,
   LogoFfmpeg,
+  LogoGo,
 }

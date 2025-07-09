@@ -3,7 +3,7 @@ import { GlobeAltIcon } from '@heroicons/react/24/outline'
 
 type Demo = {
   heading: string
-  githubLink: string
+  githubLink?: string
   description?: string
   websiteLink?: string
   image?: string
@@ -17,6 +17,7 @@ type Demo = {
   python?: boolean
   opencv?: boolean
   ffmpeg?: boolean
+  go?: boolean
 }
 
 const demos: Demo[] = [
@@ -39,7 +40,25 @@ const demos: Demo[] = [
     opencv: true,
     ffmpeg: true,
   },
+  {
+    image: assets.ImageDquery,
+    heading: 'Domain Duery',
+    description: 'a fast site to query date and snapshot numbers of a domain',
+    websiteLink: 'https://dquery.site',
+    html: true,
+    javascript: true,
+    css: true,
+    go: true,
+  },
 ]
+
+const LogoCard: React.FC<{ src: string }> = ({ src }) => {
+  return (
+    <div className='flex flex-col justify-center items-center gap-4 py-4 px-4 bg-gray-50 rounded-full filter shadow-md dark:bg-primary-400 dark:hover:bg-primary-300'>
+      <img className='h-8 object-contain dark:filter dark:invert' src={src} alt='logo' width={32} height={32} />
+    </div>
+  )
+}
 
 const CardGrid: React.FC = () => {
   return (
@@ -57,58 +76,15 @@ const CardGrid: React.FC = () => {
               <h3 className='text-primary text-4xl font-semibold mb-4 dark:text-white'>{demo.heading}</h3>
               <p className='text-primary-400 text-base dark:text-neutral-300'>{demo.description}</p>
               <div className='flex flex-wrap items-center gap-4 py-4'>
-                {demo.html && (
-                  <div className='flex flex-col justify-center items-center gap-4 py-4 px-4 bg-gray-50 rounded-full filter shadow-md dark:bg-primary-400 dark:hover:bg-primary-300'>
-                    <img className='h-8 object-contain dark:filter dark:invert' src={assets.LogoHtml} alt='html logo' width={32} height={32} />
-                  </div>
-                )}
-                {demo.css && (
-                  <div className='flex flex-col justify-center items-center gap-4 py-4 px-4 bg-gray-50 rounded-full filter shadow-md dark:bg-primary-400 dark:hover:bg-primary-300'>
-                    <img className='h-8 object-contain dark:filter dark:invert' src={assets.LogoCss} alt='css logo' width={32} height={32} />
-                  </div>
-                )}
-                {demo.javascript && (
-                  <div className='flex flex-col justify-center items-center gap-4 py-4 px-4 bg-gray-50 rounded-full filter shadow-md dark:bg-primary-400 dark:hover:bg-primary-300'>
-                    <img
-                      className='h-8 object-contain dark:filter dark:invert'
-                      src={assets.LogoJavascript}
-                      alt='javascript logo'
-                      width={32}
-                      height={32}
-                    />
-                  </div>
-                )}
-                {demo.react && (
-                  <div className='flex flex-col justify-center items-center gap-4 py-4 px-4 bg-gray-50 rounded-full filter shadow-md dark:bg-primary-400 dark:hover:bg-primary-300'>
-                    <img className='h-8 object-contain dark:filter dark:invert' src={assets.LogoReact} alt='react logo' width={32} height={32} />
-                  </div>
-                )}
-                {demo.tailwind && (
-                  <div className='flex flex-col justify-center items-center gap-4 py-4 px-4 bg-gray-50 rounded-full filter shadow-md dark:bg-primary-400 dark:hover:bg-primary-300'>
-                    <img
-                      className='h-8 object-contain dark:filter dark:invert'
-                      src={assets.LogoTailwind}
-                      alt='tailwind logo'
-                      width={32}
-                      height={32}
-                    />
-                  </div>
-                )}
-                {demo.python && (
-                  <div className='flex flex-col justify-center items-center gap-4 py-4 px-4 bg-gray-50 rounded-full filter shadow-md dark:bg-primary-400 dark:hover:bg-primary-300'>
-                    <img className='h-8 object-contain dark:filter dark:invert' src={assets.LogoPython} alt='python logo' width={32} height={32} />
-                  </div>
-                )}
-                {demo.opencv && (
-                  <div className='flex flex-col justify-center items-center gap-4 py-4 px-4 bg-gray-50 rounded-full filter shadow-md dark:bg-primary-400 dark:hover:bg-primary-300'>
-                    <img className='h-8 object-contain dark:filter dark:invert' src={assets.LogoOpencv} alt='opencv logo' width={32} height={32} />
-                  </div>
-                )}
-                {demo.ffmpeg && (
-                  <div className='flex flex-col justify-center items-center gap-4 py-4 px-4 bg-gray-50 rounded-full filter shadow-md dark:bg-primary-400 dark:hover:bg-primary-300'>
-                    <img className='h-8 object-contain dark:filter dark:invert' src={assets.LogoFfmpeg} alt='ffmpeg logo' width={32} height={32} />
-                  </div>
-                )}
+                {demo.html && <LogoCard src={assets.LogoHtml} />}
+                {demo.css && <LogoCard src={assets.LogoCss} />}
+                {demo.javascript && <LogoCard src={assets.LogoJavascript} />}
+                {demo.react && <LogoCard src={assets.LogoReact} />}
+                {demo.tailwind && <LogoCard src={assets.LogoTailwind} />}
+                {demo.python && <LogoCard src={assets.LogoPython} />}
+                {demo.opencv && <LogoCard src={assets.LogoOpencv} />}
+                {demo.ffmpeg && <LogoCard src={assets.LogoFfmpeg} />}
+                {demo.go && <LogoCard src={assets.LogoGo} />}
               </div>
               <div className='flex flex-row justify-center gap-4 py-4'>
                 {demo.githubLink && (
