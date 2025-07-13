@@ -1,6 +1,6 @@
-import ImageGeooChi from '@/assets/geoochi.jpg'
-import ImageTrackFly from '@/assets/demos/trackfly.jpg'
-import ImageDquery from '@/assets/demos/dquery.png'
+import ImageGeooChi from '@/assets/geoochi.webp'
+import ImageTrackFly from '@/assets/demos/trackfly.webp'
+import ImageDquery from '@/assets/demos/dquery.webp'
 
 import VideoCollisions from '@/assets/demos/collisions.mp4'
 
