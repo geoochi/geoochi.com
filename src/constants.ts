@@ -4,8 +4,8 @@ import ImageDquery from '@/assets/demos/dquery.webp'
 
 import VideoCollisions from '@/assets/demos/collisions.mp4'
 
-import LogoLight from '@/assets/logo/logo-light.png'
-import LogoDark from '@/assets/logo/logo-dark.png'
+import LogoLight from '@/assets/logo/logo-light.webp'
+import LogoDark from '@/assets/logo/logo-dark.webp'
 import LogoGithub from '@/assets/logo/github.svg'
 import LogoHtml from '@/assets/logo/html.svg'
 import LogoX from '@/assets/logo/x.svg'

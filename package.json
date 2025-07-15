@@ -3,7 +3,8 @@
   "scripts": {
     "d": "vite",
     "b": "vite build",
-    "p": "bunx http-server dist -a 127.0.0.1 -p 5173"
+    "p": "bunx http-server dist -a 127.0.0.1 -p 5173",
+    "img2webp": "./scripts/img2webp.sh"
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
