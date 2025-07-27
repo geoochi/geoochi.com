@@ -1,6 +1,7 @@
 import ImageGeooChi from '@/assets/geoochi.webp'
 import ImageTrackFly from '@/assets/demos/trackfly.webp'
 import ImageDquery from '@/assets/demos/dquery.webp'
+import ImageUltraQR from '@/assets/demos/ultraqr.codes.webp'
 
 import VideoCollisions from '@/assets/demos/collisions.mp4'
 
@@ -22,6 +23,7 @@ export default {
   ImageTrackFly,
   ImageGeooChi,
   ImageDquery,
+  ImageUltraQR,
   VideoCollisions,
   LogoLight,
   LogoDark,

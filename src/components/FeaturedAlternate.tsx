@@ -50,6 +50,15 @@ const demos: Demo[] = [
     css: true,
     go: true,
   },
+  {
+    image: assets.ImageUltraQR,
+    heading: 'Ultrafast Qrcode',
+    description: 'a tool to encode a text or decode a qrcode image online, ultrafast',
+    websiteLink: 'https://ultraqr.codes',
+    html: true,
+    javascript: true,
+    css: true,
+  },
 ]
 
 const LogoCard: React.FC<{ src: string }> = ({ src }) => {
