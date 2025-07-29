@@ -1,9 +1,9 @@
 import ImageGeooChi from '@/assets/geoochi.webp'
-import ImageTrackFly from '@/assets/demos/trackfly.webp'
-import ImageDquery from '@/assets/demos/dquery.webp'
-import ImageUltraQR from '@/assets/demos/ultraqr.codes.webp'
 
 import VideoCollisions from '@/assets/demos/collisions.mp4'
+import VideoDquery from '@/assets/demos/dquery.mp4'
+import VideoTrackfly from '@/assets/demos/track-fly.mp4'
+import VideoUltraQR from '@/assets/demos/ultraqr.codes.mp4'
 
 import LogoLight from '@/assets/logo/logo-light.webp'
 import LogoDark from '@/assets/logo/logo-dark.webp'
@@ -20,11 +20,11 @@ import LogoFfmpeg from '@/assets/logo/ffmpeg.svg'
 import LogoGo from '@/assets/logo/go.svg'
 
 export default {
-  ImageTrackFly,
   ImageGeooChi,
-  ImageDquery,
-  ImageUltraQR,
   VideoCollisions,
+  VideoDquery,
+  VideoTrackfly,
+  VideoUltraQR,
   LogoLight,
   LogoDark,
   LogoGithub,

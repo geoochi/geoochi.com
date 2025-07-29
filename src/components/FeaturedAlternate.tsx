@@ -22,7 +22,7 @@ type Demo = {
 
 const demos: Demo[] = [
   {
-    image: assets.ImageTrackFly,
+    video: assets.VideoTrackfly,
     heading: 'Track Fly Animation',
     description: 'An track fly animation built by python & js',
     githubLink: 'https://github.com/geoochi/track-fly',
@@ -41,7 +41,7 @@ const demos: Demo[] = [
     ffmpeg: true,
   },
   {
-    image: assets.ImageDquery,
+    video: assets.VideoDquery,
     heading: 'Domain Duery',
     description: 'a fast site to query date and snapshot numbers of a domain',
     websiteLink: 'https://dquery.site',
@@ -51,10 +51,11 @@ const demos: Demo[] = [
     go: true,
   },
   {
-    image: assets.ImageUltraQR,
+    video: assets.VideoUltraQR,
     heading: 'Ultrafast Qrcode',
     description: 'a tool to encode a text or decode a qrcode image online, ultrafast',
     websiteLink: 'https://ultraqr.codes',
+    githubLink: 'https://github.com/geoochi/ultraqr.codes',
     html: true,
     javascript: true,
     css: true,
