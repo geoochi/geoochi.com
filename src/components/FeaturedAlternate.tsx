@@ -13,11 +13,13 @@ type Demo = {
   css?: boolean
   react?: boolean
   next?: boolean
+  express?: boolean
+  go?: boolean
   tailwind?: boolean
   python?: boolean
+  fastapi?: boolean
   opencv?: boolean
   ffmpeg?: boolean
-  go?: boolean
 }
 
 const demos: Demo[] = [
@@ -27,9 +29,7 @@ const demos: Demo[] = [
     description: 'An track fly animation built by python & js',
     githubLink: 'https://github.com/geoochi/track-fly',
     websiteLink: 'https://track-fly-geoochi-demos.vercel.app/',
-    html: true,
-    javascript: true,
-    css: true,
+    next: true,
   },
   {
     video: assets.VideoCollisions,
@@ -45,10 +45,10 @@ const demos: Demo[] = [
     heading: 'Domain Duery',
     description: 'a fast site to query date and snapshot numbers of a domain',
     websiteLink: 'https://dquery.site',
+    fastapi: true,
     html: true,
     javascript: true,
     css: true,
-    go: true,
   },
   {
     video: assets.VideoUltraQR,
@@ -56,6 +56,17 @@ const demos: Demo[] = [
     description: 'a tool to encode a text or decode a qrcode image online, ultrafast',
     websiteLink: 'https://ultraqr.codes',
     githubLink: 'https://github.com/geoochi/ultraqr.codes',
+    html: true,
+    javascript: true,
+    css: true,
+  },
+  {
+    video: assets.VideoStereoVerify,
+    heading: 'Stereo Verify',
+    description: 'Prevent AI from passing the Turing test by stereo verify',
+    websiteLink: 'https://stereo-verify.vercel.app/',
+    githubLink: 'https://github.com/geoochi/stereo-verify',
+    express: true,
     html: true,
     javascript: true,
     css: true,
@@ -86,6 +97,9 @@ const CardGrid: React.FC = () => {
               <h3 className='text-primary text-4xl font-semibold mb-4 dark:text-white'>{demo.heading}</h3>
               <p className='text-primary-400 text-base dark:text-neutral-300'>{demo.description}</p>
               <div className='flex flex-wrap items-center gap-4 py-4'>
+                {demo.express && <LogoCard src={assets.LogoExpress} />}
+                {demo.fastapi && <LogoCard src={assets.LogoFastAPI} />}
+                {demo.next && <LogoCard src={assets.LogoNextJS} />}
                 {demo.html && <LogoCard src={assets.LogoHtml} />}
                 {demo.css && <LogoCard src={assets.LogoCss} />}
                 {demo.javascript && <LogoCard src={assets.LogoJavascript} />}
