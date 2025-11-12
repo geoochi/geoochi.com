@@ -71,6 +71,15 @@ const demos: Demo[] = [
     javascript: true,
     css: true,
   },
+  {
+    video: assets.VideoFormulaFormatter,
+    heading: 'Formula Formatter',
+    description: 'Format your loooooooooooog excel formula',
+    websiteLink: 'https://geoochi.github.io/formula-formatter',
+    githubLink: 'https://github.com/geoochi/formula-formatter',
+    html: true,
+    python: true,
+  },
 ]
 
 const LogoCard: React.FC<{ src: string }> = ({ src }) => {

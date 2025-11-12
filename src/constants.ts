@@ -5,6 +5,7 @@ import VideoDquery from '@/assets/demos/dquery.mp4'
 import VideoTrackfly from '@/assets/demos/track-fly.mp4'
 import VideoUltraQR from '@/assets/demos/ultraqr.codes.mp4'
 import VideoStereoVerify from '@/assets/demos/stereo-verify.mp4'
+import VideoFormulaFormatter from '@/assets/demos/formula-formatter.mp4'
 
 import LogoLight from '@/assets/logo/logo-light.webp'
 import LogoDark from '@/assets/logo/logo-dark.webp'
@@ -30,6 +31,7 @@ export default {
   VideoTrackfly,
   VideoUltraQR,
   VideoStereoVerify,
+  VideoFormulaFormatter,
   LogoLight,
   LogoDark,
   LogoGithub,
