@@ -1,4 +1,4 @@
-import ImageGeooChi from '@/assets/geoochi.webp'
+import ImageGeooChi from '@/assets/geoochi.jpg'
 
 import VideoCollisions from '@/assets/demos/collisions.mp4'
 import VideoDquery from '@/assets/demos/dquery.mp4'
