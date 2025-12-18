@@ -13,10 +13,10 @@ const NavBar: React.FC = () => {
             <img className='h-12 w-auto' src={theme === 'dark' ? images.LogoDark : images.LogoLight} alt='brand icon' height={12} width={245} />
           </a>
           <div className='flex items-center gap-8'>
-            <a href='/blog' target='_blank' className='text-2xl transition-opacity dark:text-white'>
+            <a href='/blog' className='text-2xl transition-opacity dark:text-white'>
               Blog
             </a>
-            <a href='/gallery' target='_blank' className='text-2xl transition-opacity dark:text-white'>
+            <a href='/gallery' className='text-2xl transition-opacity dark:text-white'>
               Gallery
             </a>
             <div className='text-primary dark:text-white' onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
