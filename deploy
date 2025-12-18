@@ -1,7 +1,7 @@
-#! /usr/bin/sh
+#! /bin/sh
 
 localPath=$(dirname $(realpath $0))
 cd $localPath
 
 pnpm b
-rsync -az -e ssh ./dist/ geoochi-sc:/home/ubuntu/projects/homepage
+rsync -az -e ssh ./dist/ geoochi-sc:/home/ubuntu/projects/homepage/
