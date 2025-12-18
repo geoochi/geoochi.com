@@ -5,4 +5,3 @@ cd $localPath
 
 pnpm b
 rsync -az -e ssh ./dist/ geoochi-sc:/home/ubuntu/projects/space/
-tcb hosting deploy dist/ space/ -e singfor-live-9gizzbuc59a85fe6
