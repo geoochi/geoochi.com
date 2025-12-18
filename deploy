@@ -1,0 +1,3 @@
+#! /usr/bin/sh
+
+rsync -az -e ssh ./dist/ geoochi-sc:/home/ubuntu/projects/homepage
