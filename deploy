@@ -3,4 +3,4 @@
 localPath=$(dirname $(realpath $0))
 cd $localPath
 
-pnpm b && rsync -az -e ssh ./dist/ geoochi-hw:/root/projects/geoochi.github.io/
+pnpm b && rsync -az -e ssh ./dist/ geoochi-hw:/root/projects/dist/
